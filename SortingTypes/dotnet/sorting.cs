@@ -1,6 +1,10 @@
 public static class Sorting
-{
+{/// <summary>
+ /// Сортировка методом выбора
+ /// </summary>
+ /// <param name="collection">Исходный массив </param>
     public static void SortType(int[] collection)
+
     {
         int size = collection.Length;
         for (int i = 0; i < size - 1; i++)
