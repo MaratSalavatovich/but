@@ -1,22 +1,7 @@
-﻿static void SortType(int[] collection)
-{
-    int size = collection.Length;
-    for (int i = 0; i < size - 1; i++)
-    {
-        int pos = i;
-        for (int j = i; j < size; j++)
-        {
-            if (collection[j] < collection[pos]) pos = j;
-        }
-        int temp = collection[i];
-        collection[i] = collection[pos];
-        collection[pos] = temp;
-    }
-}
+﻿using static Sorting;
+using static Infrastructure;
 
-
-int[] array = { 7, 6, 3, 4, 5, 1, 2, 3 };
-
-Console.WriteLine($"[{String.Join(',', array)}]");
+int[] array = CreateArray(10);
+Print(array);
 SortType(array);
-Console.WriteLine($"[{String.Join(',', array)}]");
+Print(array);
